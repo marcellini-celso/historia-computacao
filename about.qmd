@@ -1,0 +1,6 @@
+---
+title: "Sobre o Projeto"
+---
+
+Este site compila uma **linha do tempo comentada** da computação: dispositivos, ideias, linguagens, redes e inteligência artificial — em português e com foco didático.
+

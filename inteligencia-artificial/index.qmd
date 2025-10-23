@@ -1,0 +1,7 @@
+---
+title: "🤖 Inteligência Artificial"
+description: "Da IA simbólica ao deep learning e aos modelos de linguagem."
+---
+
+Mapa dos temas de IA no projeto e links para as séries.
+

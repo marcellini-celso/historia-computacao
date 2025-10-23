@@ -1,0 +1,12 @@
+---
+title: "Parte 1 — Raízes Antigas"
+categories: [história da computação]
+tags: [ábaco, anticítera, numeração]
+---
+
+Uma visão geral das origens do cálculo e da representação simbólica.
+
+:::{.callout-important}
+**Resumo rápido:** do **ábaco** à **Máquina de Anticítera**, o cálculo ganha corpo físico.
+:::
+

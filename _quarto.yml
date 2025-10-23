@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "História da Computação"
+  description: "Da contagem em ossos aos LLMs — uma viagem pelas eras da computação."
+  site-url: https://SEU_USUARIO.github.io/historia-computacao
+  favicon: images/favicon.png
+  navbar:
+    left:
+      - text: "Início"
+        href: index.qmd
+      - text: "Eras"
+        menu:
+          - text: "Raízes Antigas"
+            href: eras/parte-1-raizes-antigas.qmd
+          - text: "Era Mecânica"
+            href: eras/parte-2-era-mecanica.qmd
+          - text: "Era Digital"
+            href: eras/parte-3-era-digital.qmd
+          - text: "Revolução Pessoal"
+            href: eras/parte-4-revolucao-pessoal.qmd
+          - text: "Era das Redes"
+            href: eras/parte-5-era-das-redes.qmd
+          - text: "Era da Inteligência"
+            href: eras/parte-6-era-da-inteligencia.qmd
+      - text: "Linguagens"
+        href: linguagens/index.qmd
+      - text: "Hardware"
+        href: hardware/index.qmd
+      - text: "IA"
+        href: inteligencia-artificial/index.qmd
+      - text: "Sobre"
+        href: about.qmd
+  page-footer:
+    left: "© {year} Blog do Marcellini"
+    right: "Feito com Quarto"
+
+format:
+  html:
+    theme: darkly
+    css: styles/custom.css
+    toc: true
+    toc-location: left
+    number-sections: false
+    code-overflow: scroll
+    smooth-scroll: true
+    fig-align: center
+    highlight-style: github-dark
+

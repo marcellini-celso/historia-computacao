@@ -1,0 +1,24 @@
+---
+title: "História da Computação"
+page-layout: full
+---
+
+::: {.hero}
+# História da Computação
+
+**Da contagem em ossos aos modelos de linguagem — como a humanidade aprendeu a pensar com máquinas.**
+
+Explore as eras, pessoas, linguagens e máquinas que moldaram o mundo digital.
+:::
+
+:::{.callout-tip}
+### Comece por aqui
+- [Raízes Antigas](eras/parte-1-raizes-antigas.qmd)  
+- [Era Digital](eras/parte-3-era-digital.qmd)  
+- [LLMs — Introdução](inteligencia-artificial/index.qmd)
+:::
+
+:::{.callout-note}
+> **“A questão não é se as máquinas podem pensar, mas se podemos entender o que significa pensar.”**
+:::
+

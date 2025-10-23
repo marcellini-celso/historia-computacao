@@ -1,0 +1,64 @@
+/* ===========================
+   Tema escuro — ajustes finos
+   =========================== */
+
+:root {
+  --bg: #0f1116;
+  --panel: #161b25;
+  --panel-2: #1b2230;
+  --border: #273040;
+  --text: #e9eef7;
+  --muted: #b8c1d4;
+  --brand: #6ea8fe;
+  --accent: #f3a065;
+}
+
+/* corpo e tipografia */
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* links */
+a { color: var(--brand); }
+a:hover { opacity: .9; }
+
+/* cards, callouts, painéis */
+.card, .callout, .panel, .quarto-figure {
+  background: var(--panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+}
+
+/* navbar reforçada */
+.navbar, .navbar-dark {
+  background-color: #0b0d12 !important;
+  border-bottom: 1px solid var(--border);
+}
+
+/* tabelas */
+table.table {
+  background: var(--panel);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* código inline e blocks */
+code, pre, .sourceCode {
+  background: var(--panel-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+}
+
+/* rodapé */
+.footer {
+  color: var(--muted);
+}
+
+/* imagens responsivas com margens elegantes */
+img {
+  border-radius: 10px;
+}
+
