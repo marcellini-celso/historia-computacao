@@ -4,3 +4,6 @@ _site/
 *.Rproj
 .DS_Store
 .quarto/
+
+/.quarto/
+**/*.quarto_ipynb
