@@ -17,12 +17,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Use a versão v3 da action e fixe uma versão estável do Quarto
+      # Action correta + versão do Quarto fixada (troque se quiser outra)
       - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v3
+        uses: quarto-dev/quarto-actions/setup@v2
         with:
-          # Se preferir, troque por outra estável que você use localmente
           version: "1.5.57"
+
+      - name: Show Quarto version
+        run: quarto --version
 
       - name: Render site
         run: quarto render
