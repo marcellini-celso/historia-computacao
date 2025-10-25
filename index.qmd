@@ -13,13 +13,17 @@ resources:
   - images/banner-historia-computacao.png
 ---
 
-::: {.hero-banner}
-![](images/banner-historia-computacao.png)
+![Banner da História da Computação](images/banner-historia-computacao.png){fig-align="center" width="100%" alt="Banner da História da Computação"}
+
+::: {.hero-text}
+# História da Computação
+
+:::{.hero-subtitle}
+Da contagem em ossos aos modelos de linguagem — como a humanidade aprendeu a pensar com máquinas.
+:::
 :::
 
 <div class="intro-block">
-> Da contagem em ossos ao aprendizado de máquina — como transformamos ideias em algoritmos, e algoritmos em civilizações.
-
 > **“A questão não é se as máquinas podem pensar, mas se podemos entender o que significa pensar.”**[^turing]
 </div>
 
