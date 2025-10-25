@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Blog do Marcellini">
+<meta name="description" content="Do ábaco à Máquina de Anticítera — os primeiros instrumentos que transformaram o pensamento em cálculo.">
 
-<title>Parte 1 — Raízes Antigas – História da Computação</title>
+<title>💾 Parte 1 — As Raízes Antigas – História da Computação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -40,6 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -54,17 +91,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
@@ -84,8 +121,8 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">História da Computação</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -96,50 +133,58 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-eras" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Eras</span>
+ <span class="menu-text">📜 Eras</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-eras">    
         <li>
     <a class="dropdown-item" href="../eras/parte-1-raizes-antigas.html">
- <span class="dropdown-text">Raízes Antigas</span></a>
+ <span class="dropdown-text">1️⃣ Raízes Antigas</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../eras/parte-2-era-mecanica.qmd">
- <span class="dropdown-text">Era Mecânica</span></a>
+ <span class="dropdown-text">2️⃣ Era Mecânica</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../eras/parte-3-era-digital.qmd">
- <span class="dropdown-text">Era Digital</span></a>
+ <span class="dropdown-text">3️⃣ Era Digital</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../eras/parte-4-revolucao-pessoal.qmd">
- <span class="dropdown-text">Revolução Pessoal</span></a>
+ <span class="dropdown-text">4️⃣ Revolução Pessoal</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../eras/parte-5-era-das-redes.qmd">
- <span class="dropdown-text">Era das Redes</span></a>
+ <span class="dropdown-text">5️⃣ Era das Redes</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../eras/parte-6-era-da-inteligencia.qmd">
- <span class="dropdown-text">Era da Inteligência</span></a>
+ <span class="dropdown-text">6️⃣ Era da Inteligência</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="../linguagens/index.qmd"> 
-<span class="menu-text">Linguagens</span></a>
+<span class="menu-text">🧮 Linguagens</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../hardware/index.qmd"> 
-<span class="menu-text">Hardware</span></a>
+<span class="menu-text">💾 Hardware</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../inteligencia-artificial/index.html"> 
-<span class="menu-text">IA</span></a>
+<span class="menu-text">🤖 Inteligência Artificial</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sistemas/index.qmd"> 
+<span class="menu-text">🧠 Sistemas</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../empresas/index.qmd"> 
+<span class="menu-text">🏭 Empresas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">Sobre</span></a>
+<span class="menu-text">ℹ️ Sobre</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -149,31 +194,80 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#parte-1-as-raízes-antigas" id="toc-parte-1-as-raízes-antigas" class="nav-link active" data-scroll-target="#parte-1-as-raízes-antigas"><span class="header-section-number">1</span> 💾 Parte 1 — As Raízes Antigas</a>
+  <ul class="collapse">
+  <li><a href="#o-impulso-de-contar" id="toc-o-impulso-de-contar" class="nav-link" data-scroll-target="#o-impulso-de-contar"><span class="header-section-number">1.1</span> 🏺 O impulso de contar</a></li>
+  <li><a href="#osso-de-ishango-c.-20-000-a.c." id="toc-osso-de-ishango-c.-20-000-a.c." class="nav-link" data-scroll-target="#osso-de-ishango-c.-20-000-a.c."><span class="header-section-number">1.2</span> 🦴 Osso de Ishango (c.&nbsp;20 000 a.C.)</a></li>
+  <li><a href="#do-ábaco-às-tábuas" id="toc-do-ábaco-às-tábuas" class="nav-link" data-scroll-target="#do-ábaco-às-tábuas"><span class="header-section-number">1.3</span> 🧮 Do Ábaco às Tábuas</a></li>
+  <li><a href="#ábaco-sumério-c.-2400-a.c." id="toc-ábaco-sumério-c.-2400-a.c." class="nav-link" data-scroll-target="#ábaco-sumério-c.-2400-a.c."><span class="header-section-number">1.4</span> 🧮 Ábaco Sumério (c.&nbsp;2400 a.C.)</a></li>
+  <li><a href="#ábaco-chinês-suanpan-c.-500-a.c." id="toc-ábaco-chinês-suanpan-c.-500-a.c." class="nav-link" data-scroll-target="#ábaco-chinês-suanpan-c.-500-a.c."><span class="header-section-number">1.5</span> 🧮 Ábaco Chinês (Suanpan, c.&nbsp;500 a.C.)</a></li>
+  <li><a href="#máquina-de-anticítera-c.-100-a.c." id="toc-máquina-de-anticítera-c.-100-a.c." class="nav-link" data-scroll-target="#máquina-de-anticítera-c.-100-a.c."><span class="header-section-number">1.6</span> ⚙️ Máquina de Anticítera (c.&nbsp;100 a.C.)</a>
+  <ul class="collapse">
+  <li><a href="#bastões-de-napier-1617" id="toc-bastões-de-napier-1617" class="nav-link" data-scroll-target="#bastões-de-napier-1617"><span class="header-section-number">1.6.1</span> 📏 Bastões de Napier (1617)</a></li>
+  <li><a href="#régua-de-cálculo-1632" id="toc-régua-de-cálculo-1632" class="nav-link" data-scroll-target="#régua-de-cálculo-1632"><span class="header-section-number">1.6.2</span> 📐 Régua de Cálculo (1632)</a></li>
+  <li><a href="#máquina-de-pascal-1642" id="toc-máquina-de-pascal-1642" class="nav-link" data-scroll-target="#máquina-de-pascal-1642"><span class="header-section-number">1.6.3</span> 🧠 Máquina de Pascal (1642)</a></li>
+  </ul></li>
+  <li><a href="#linha-do-tempo-raízes-da-computação" id="toc-linha-do-tempo-raízes-da-computação" class="nav-link" data-scroll-target="#linha-do-tempo-raízes-da-computação"><span class="header-section-number">1.7</span> 🕰️ Linha do Tempo — Raízes da Computação</a></li>
+  <li><a href="#quiz-as-raízes-da-computação" id="toc-quiz-as-raízes-da-computação" class="nav-link" data-scroll-target="#quiz-as-raízes-da-computação"><span class="header-section-number">1.8</span> 🧩 Quiz — As Raízes da Computação</a></li>
+  <li><a href="#referências-rápidas" id="toc-referências-rápidas" class="nav-link" data-scroll-target="#referências-rápidas"><span class="header-section-number">1.9</span> Referências Rápidas</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Parte 1 — Raízes Antigas</h1>
+<h1 class="title">💾 Parte 1 — As Raízes Antigas</h1>
   <div class="quarto-categories">
+    <div class="quarto-category">tecnologia</div>
     <div class="quarto-category">história da computação</div>
+    <div class="quarto-category">computação</div>
+    <div class="quarto-category">história</div>
+    <div class="quarto-category">instrumentos de cálculo</div>
+    <div class="quarto-category">antiguidade</div>
+    <div class="quarto-category">ábaco</div>
+    <div class="quarto-category">Anticítera</div>
+    <div class="quarto-category">cálculo</div>
+    <div class="quarto-category">lógica</div>
+    <div class="quarto-category">civilizações antigas</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Do ábaco à Máquina de Anticítera — os primeiros instrumentos que transformaram o pensamento em cálculo.
+  </div>
+</div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-right">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Blog do Marcellini </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">13 de outubro de 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -183,22 +277,569 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Uma visão geral das origens do cálculo e da representação simbólica.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+<p><a href="../index.html">← História da Computação</a> · <a href="../index.html">← Início</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/historia-da-computacao-capa-dark.png#only-dark" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%" alt="Ilustração simbólica da evolução dos computadores"></p>
+</figure>
+</div>
+<section id="parte-1-as-raízes-antigas" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 💾 Parte 1 — As Raízes Antigas</h1>
+<blockquote class="blockquote">
+<p>“Antes dos circuitos, vieram as ideias.<br>
+Antes do silício, o cálculo era humano.”</p>
+</blockquote>
+<hr>
+<section id="o-impulso-de-contar" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="o-impulso-de-contar"><span class="header-section-number">1.1</span> 🏺 O impulso de contar</h2>
+<p>A história da computação começa <strong>muito antes da eletricidade</strong>, dos circuitos e dos códigos binários.<br>
+Ela nasce no instante em que o ser humano <strong>descobre o poder do símbolo</strong> — a capacidade de fazer o mundo caber em um sinal, um traço, uma pedra.</p>
+<p>Esse impulso de <strong>representar o real por meio de abstrações</strong> é a semente tanto da matemática quanto da computação.<br>
+Marcas feitas em ossos, pedras ou argila tornaram-se <strong>extensões da mente</strong>, permitindo que o pensamento se fixasse fora do corpo, <strong>transformando memória em matéria</strong>.</p>
+<p>Entre os exemplos mais antigos está o <strong>Osso de Ishango</strong>, datado de cerca de <strong>20 mil anos atrás</strong> e encontrado nas margens do Lago Eduardo, na África Central.<br>
+Em seu pequeno corpo de marfim fossilizado, veem-se <strong>colunas de entalhes agrupados</strong> — talvez contagens lunares, talvez operações aritméticas primitivas.<br>
+O que importa é o salto cognitivo: ali surge a <strong>ideia de registro</strong>, o ato de gravar um raciocínio no mundo físico.</p>
+<blockquote class="blockquote">
+<p>“Contar é o primeiro algoritmo.<br>
+O resto é apenas sua automatização.”</p>
+</blockquote>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="🪶 Curiosidade Arqueológica — Os Primeiros Registros Numéricos">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+🪶 Curiosidade Arqueológica — Os Primeiros Registros Numéricos
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Resumo rápido:</strong> do <strong>ábaco</strong> à <strong>Máquina de Anticítera</strong>, o cálculo ganha corpo físico.</p>
+<ul>
+<li><strong>Osso de Lebombo</strong> (Suazilândia, ~35 000 a.C.) — entalhes regulares para contagem simples.<br>
+</li>
+<li><strong>Tally sticks</strong> europeus — bastões de madeira com cortes que registravam trocas comerciais.<br>
+</li>
+<li><strong>Tábuas de argila mesopotâmicas</strong> — controle de grãos e impostos: os <strong>primeiros bancos de dados</strong> da humanidade.</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="osso-de-ishango-c.-20-000-a.c." class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="osso-de-ishango-c.-20-000-a.c."><span class="header-section-number">1.2</span> 🦴 Osso de Ishango (c.&nbsp;20 000 a.C.)</h2>
+<p>O <strong>Osso de Ishango</strong>, descoberto em 1950 pelo arqueólogo <strong>Jean de Heinzelin de Braucourt</strong>, apresenta <strong>três colunas de entalhes verticais</strong> agrupados em padrões numéricos não aleatórios.<br>
+Pesquisas revelaram sequências como <strong>3–6–4–8</strong>, <strong>10–5–5–10</strong> e até <strong>11–13–17–19</strong>, correspondendo a <strong>números primos entre 10 e 20</strong> — um <strong>sistema lógico de contagem</strong>, talvez um <strong>calendário lunar</strong>.</p>
+<p>O artefato mostra pela primeira vez o raciocínio matemático <strong>materializado em um objeto físico</strong>.<br>
+Guardado no <strong>Real Instituto de Ciências Naturais da Bélgica</strong>, simboliza o nascimento da <strong>consciência numérica</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="💡 Curiosidade e legado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💡 Curiosidade e legado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O Osso de Ishango é considerado o <strong>primeiro artefato matemático da história</strong> e, simbolicamente, o <strong>primeiro “dispositivo de armazenamento de dados”</strong> humano.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ishango-diagrama-colunas.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%" alt="Diagrama didático das três colunas do Osso de Ishango"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Clique para ver o código (Python) — Diagrama das Três Colunas">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Clique para ver o código (Python) — Diagrama das Três Colunas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="64f3a722" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gera: images/ishango-diagrama-colunas.png e .svg</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Rectangle</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.collections <span class="im">import</span> LineCollection</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>col_A <span class="op">=</span> [<span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">17</span>, <span class="dv">19</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>col_B <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>col_C <span class="op">=</span> [<span class="dv">11</span>, <span class="dv">21</span>, <span class="dv">19</span>, <span class="dv">9</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>bg, fg, subtle <span class="op">=</span> <span class="st">"#111217"</span>, <span class="st">"#f1f1f1"</span>, <span class="st">"#cfd2d8"</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>col_colors <span class="op">=</span> [<span class="st">"#6ea8fe"</span>, <span class="st">"#6fd17a"</span>, <span class="st">"#f3a065"</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">8.4</span>, <span class="fl">9.4</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(bg)<span class="op">;</span> fig.patch.set_facecolor(bg)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>x_positions <span class="op">=</span> [<span class="fl">0.24</span>, <span class="fl">0.50</span>, <span class="fl">0.76</span>]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>notch_len, dy_notch, dy_group, line_w <span class="op">=</span> <span class="fl">0.08</span>, <span class="fl">0.012</span>, <span class="fl">0.038</span>, <span class="fl">2.2</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_column(x, groups, color, label, y0<span class="op">=</span><span class="fl">0.17</span>, annotate_side<span class="op">=</span><span class="st">"auto"</span>):</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y0</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    segs, centers <span class="op">=</span> [], []</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    side <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> g <span class="kw">in</span> groups:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(g):</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            yi <span class="op">=</span> y <span class="op">+</span> i<span class="op">*</span>dy_notch</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            segs.append(((x <span class="op">-</span> notch_len<span class="op">/</span><span class="dv">2</span>, yi), (x <span class="op">+</span> notch_len<span class="op">/</span><span class="dv">2</span>, yi)))</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        cy <span class="op">=</span> y <span class="op">+</span> (g<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>dy_notch<span class="op">/</span><span class="dv">2</span> <span class="cf">if</span> g<span class="op">&gt;</span><span class="dv">1</span> <span class="cf">else</span> y</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        centers.append((cy, g))</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        y <span class="op">+=</span> g<span class="op">*</span>dy_notch <span class="op">+</span> dy_group</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    y_max <span class="op">=</span> y <span class="op">-</span> dy_group <span class="op">+</span> dy_notch</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    ax.add_collection(LineCollection(segs, colors<span class="op">=</span>color, linewidths<span class="op">=</span>line_w, capstyle<span class="op">=</span><span class="st">"round"</span>))</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    ax.text(x, y_max <span class="op">+</span> <span class="fl">0.024</span>, label, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"bottom"</span>, fontsize<span class="op">=</span><span class="fl">12.5</span>, weight<span class="op">=</span><span class="st">"bold"</span>, color<span class="op">=</span>color)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cy, g <span class="kw">in</span> centers:</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> annotate_side <span class="op">==</span> <span class="st">"left"</span>:  side <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> annotate_side <span class="op">==</span> <span class="st">"right"</span>: side <span class="op">=</span> <span class="op">+</span><span class="dv">1</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>: side <span class="op">*=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        ax.text(x <span class="op">+</span> side<span class="op">*</span><span class="fl">0.058</span>, cy, <span class="bu">str</span>(g), ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="fl">10.5</span>, color<span class="op">=</span>fg)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y0, y_max</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>a_min, a_max <span class="op">=</span> draw_column(x_positions[<span class="dv">0</span>], col_A, col_colors[<span class="dv">0</span>], <span class="st">"A (primos)"</span>, annotate_side<span class="op">=</span><span class="st">"right"</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>b_min, b_max <span class="op">=</span> draw_column(x_positions[<span class="dv">1</span>], col_B, col_colors[<span class="dv">1</span>], <span class="st">"B (grupos aritméticos)"</span>, annotate_side<span class="op">=</span><span class="st">"right"</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>c_min, c_max <span class="op">=</span> draw_column(x_positions[<span class="dv">2</span>], col_C, col_colors[<span class="dv">2</span>], <span class="st">"C (somas notáveis)"</span>, annotate_side<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>y_min, y_max <span class="op">=</span> <span class="bu">min</span>(a_min,b_min,c_min), <span class="bu">max</span>(a_max,b_max,c_max)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>ax.add_patch(Rectangle((<span class="fl">0.10</span>, y_min <span class="op">-</span> <span class="fl">0.030</span>), <span class="fl">0.80</span>, (y_max <span class="op">-</span> y_min) <span class="op">+</span> <span class="fl">0.060</span>,</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>                       facecolor<span class="op">=</span><span class="st">"#1d1f25"</span>, edgecolor<span class="op">=</span><span class="st">"#2c313a"</span>, lw<span class="op">=</span><span class="fl">1.2</span>, zorder<span class="op">=-</span><span class="dv">5</span>))</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.5</span>, y_max <span class="op">+</span> <span class="fl">0.065</span>, <span class="st">"Osso de Ishango — Entalhes e Padrões"</span>,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"bottom"</span>, fontsize<span class="op">=</span><span class="fl">16.5</span>, color<span class="op">=</span>fg, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.5</span>, y_min <span class="op">-</span> <span class="fl">0.068</span>,</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Padrões: primos (A), duplicações (B) e somas/ciclos (C). Reconstrução didática."</span>,</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"top"</span>, fontsize<span class="op">=</span><span class="fl">10.2</span>, color<span class="op">=</span>subtle)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">;</span> ax.set_ylim(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">;</span> ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/ishango-diagrama-colunas.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>, facecolor<span class="op">=</span>fig.get_facecolor())</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/ishango-diagrama-colunas.svg"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>, facecolor<span class="op">=</span>fig.get_facecolor())</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Leitura do diagrama.</strong> As três colunas representam (A) primos; (B) duplicações e repetições; (C) somas/totalizações.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="do-ábaco-às-tábuas" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="do-ábaco-às-tábuas"><span class="header-section-number">1.3</span> 🧮 Do Ábaco às Tábuas</h2>
+<p>Antes das máquinas, vieram os <strong>instrumentos manuais</strong> — artefatos que tornaram o raciocínio <strong>visível e tangível</strong>.<br>
+Eles permitiram que a mente humana se projetasse no mundo, transformando <strong>pensar em gesto</strong>.</p>
+<ul>
+<li><strong>Ábaco sumério (c.&nbsp;2400 a.C.)</strong> — pedrinhas em sulcos representando valores posicionais.<br>
+</li>
+<li><strong>Ábaco chinês (suanpan, c.&nbsp;500 a.C.)</strong> — contas móveis para operações complexas.<br>
+</li>
+<li><strong>Tábuas de cálculo</strong> — registros de transações e somas.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="💡 Ideia-chave">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💡 Ideia-chave
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esses dispositivos inauguram a <strong>interface homem-máquina</strong>: o cálculo mental ganhou forma física.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="ábaco-sumério-c.-2400-a.c." class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="ábaco-sumério-c.-2400-a.c."><span class="header-section-number">1.4</span> 🧮 Ábaco Sumério (c.&nbsp;2400 a.C.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/abaco-sumerio-diagrama.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Diagrama didático do ábaco sumério"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Clique para ver o código (Python) — Diagrama do Ábaco Sumério">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Clique para ver o código (Python) — Diagrama do Ábaco Sumério
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="115b356c" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gera: images/abaco-sumerio-diagrama.png e .svg</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Rectangle, Circle</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>bg        <span class="op">=</span> <span class="st">"#111217"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>clay      <span class="op">=</span> <span class="st">"#d8c2a8"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>clay_edge <span class="op">=</span> <span class="st">"#b79e86"</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>groove    <span class="op">=</span> <span class="st">"#9d7f66"</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>stone     <span class="op">=</span> <span class="st">"#6b4f3a"</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>stone_hi  <span class="op">=</span> <span class="st">"#f0e6dc"</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>fg_global <span class="op">=</span> <span class="st">"#f1f1f1"</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">8.6</span>, <span class="fl">5.4</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(bg)<span class="op">;</span> fig.patch.set_facecolor(bg)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>spacing_y <span class="op">=</span> <span class="fl">0.13</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>spacing_x <span class="op">=</span> <span class="fl">0.095</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>x0, y0    <span class="op">=</span> <span class="fl">0.17</span>, <span class="fl">0.22</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>tablet_x, tablet_y <span class="op">=</span> <span class="fl">0.10</span>, <span class="fl">0.14</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>tablet_w, tablet_h <span class="op">=</span> <span class="fl">0.80</span>, <span class="fl">0.72</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>ax.add_patch(Rectangle((tablet_x, tablet_y), tablet_w, tablet_h,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                       facecolor<span class="op">=</span>clay, edgecolor<span class="op">=</span>clay_edge, lw<span class="op">=</span><span class="fl">2.2</span>, zorder<span class="op">=-</span><span class="dv">5</span>))</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(rows):</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y0 <span class="op">+</span> i <span class="op">*</span> spacing_y</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    ax.plot([x0, x0 <span class="op">+</span> (cols<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>spacing_x], [y, y],</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span>groove, lw<span class="op">=</span><span class="dv">6</span>, alpha<span class="op">=</span><span class="fl">0.9</span>, solid_capstyle<span class="op">=</span><span class="st">"round"</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> [(<span class="dv">1</span>,<span class="dv">0</span>), (<span class="dv">2</span>,<span class="dv">0</span>), (<span class="dv">4</span>,<span class="dv">0</span>),</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>             (<span class="dv">0</span>,<span class="dv">1</span>), (<span class="dv">3</span>,<span class="dv">1</span>), (<span class="dv">6</span>,<span class="dv">1</span>),</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>             (<span class="dv">1</span>,<span class="dv">2</span>), (<span class="dv">5</span>,<span class="dv">2</span>),</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>             (<span class="dv">2</span>,<span class="dv">3</span>), (<span class="dv">5</span>,<span class="dv">3</span>),</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>             (<span class="dv">4</span>,<span class="dv">4</span>), (<span class="dv">6</span>,<span class="dv">4</span>)]</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (cx, cy) <span class="kw">in</span> positions:</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x0 <span class="op">+</span> cx<span class="op">*</span>spacing_x</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y0 <span class="op">+</span> cy<span class="op">*</span>spacing_y</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="fl">0.016</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    circ <span class="op">=</span> Circle((x, y), r, facecolor<span class="op">=</span>stone, edgecolor<span class="op">=</span><span class="st">"#3f2f24"</span>, lw<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(circ)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(Circle((x<span class="op">-</span><span class="fl">0.005</span>, y<span class="op">+</span><span class="fl">0.004</span>), r<span class="op">*</span><span class="fl">0.45</span>, facecolor<span class="op">=</span>stone_hi, edgecolor<span class="op">=</span><span class="st">"none"</span>, alpha<span class="op">=</span><span class="fl">0.35</span>))</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(rows):</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y0 <span class="op">+</span> i <span class="op">*</span> spacing_y</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    ax.text(tablet_x <span class="op">-</span> <span class="fl">0.04</span>, y, <span class="ss">f"Ordem </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">"center"</span>, ha<span class="op">=</span><span class="st">"right"</span>, color<span class="op">=</span>fg_global, fontsize<span class="op">=</span><span class="fl">10.5</span>, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.5</span>, tablet_y <span class="op">+</span> tablet_h <span class="op">+</span> <span class="fl">0.06</span>,</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ábaco Sumério — Disposição dos Cálculos em Tábuas de Argila"</span>,</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>        ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"bottom"</span>, color<span class="op">=</span>fg_global, fontsize<span class="op">=</span><span class="dv">15</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.5</span>, tablet_y <span class="op">-</span> <span class="fl">0.04</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Linhas = ordens; círculos = cálculos móveis (pedrinhas)."</span>,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"top"</span>, color<span class="op">=</span><span class="st">"#cfd2d8"</span>, fontsize<span class="op">=</span><span class="fl">10.5</span>)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">;</span> ax.set_ylim(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">;</span> ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/abaco-sumerio-diagrama.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>, facecolor<span class="op">=</span>fig.get_facecolor())</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/abaco-sumerio-diagrama.svg"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>, facecolor<span class="op">=</span>fig.get_facecolor())</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Como ler.</strong> Cada linha horizontal é uma ordem (unidades, dezenas…); mover pedrinhas entre linhas altera o valor.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="ábaco-chinês-suanpan-c.-500-a.c." class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="ábaco-chinês-suanpan-c.-500-a.c."><span class="header-section-number">1.5</span> 🧮 Ábaco Chinês (Suanpan, c.&nbsp;500 a.C.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/abaco-chines.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Suanpan chinês tradicional"></p>
+</figure>
+</div>
+<p>Escavações em Sichuan e Henan revelaram versões antigas do <em>suanpan</em>, desde a dinastia Han.<br>
+Com <strong>duas contas superiores (5)</strong> e <strong>cinco inferiores (1)</strong>, realizava todas as operações aritméticas.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="🌏 Influência cultural">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🌏 Influência cultural
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Inspirou o <strong>soroban japonês</strong> e o <strong>ábaco russo (schoty)</strong>.<br>
+Exemplares no <strong>Museu Nacional da China</strong> e no <strong>Museu de Xangai</strong>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="máquina-de-anticítera-c.-100-a.c." class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="máquina-de-anticítera-c.-100-a.c."><span class="header-section-number">1.6</span> ⚙️ Máquina de Anticítera (c.&nbsp;100 a.C.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/antikythera-device.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Mecanismo de Anticítera — reconstrução moderna"></p>
+</figure>
+</div>
+<p>Descoberta em 1901 num naufrágio perto da ilha de Anticítera, essa engenhoca de bronze é o <strong>primeiro computador analógico</strong> conhecido.<br>
+Calculava <strong>posições planetárias e eclipses</strong>, unindo astronomia, matemática e mecânica.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="🔭 Marco da engenharia antiga">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🔭 Marco da engenharia antiga
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fragmentos originais no <strong>Museu Arqueológico Nacional de Atenas</strong>.</p>
+</div>
+</div>
+<hr>
+<section id="bastões-de-napier-1617" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="bastões-de-napier-1617"><span class="header-section-number">1.6.1</span> 📏 Bastões de Napier (1617)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bastoes-napier.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Bastões de Napier em caixa de madeira"></p>
+</figure>
+</div>
+<p>Inventados por <strong>John Napier</strong>, criador dos <strong>logaritmos</strong>, automatizavam multiplicações com varas numeradas.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="💡 Impacto matemático">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💡 Impacto matemático
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antepassados da <strong>régua de cálculo</strong>.<br>
+Originais na <strong>Biblioteca Nacional da Escócia</strong> e em Oxford.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="régua-de-cálculo-1632" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="régua-de-cálculo-1632"><span class="header-section-number">1.6.2</span> 📐 Régua de Cálculo (1632)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/regua-calculo.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Régua de cálculo clássica"></p>
+</figure>
+</div>
+<p>Criada por <strong>William Oughtred</strong>, transformava <strong>multiplicações em somas</strong> por escalas deslizantes.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="🧮 Símbolo da era pré-digital">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧮 Símbolo da era pré-digital
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Base do cálculo analógico moderno.<br>
+Modelos no <strong>Science Museum (Londres)</strong> e no <strong>Smithsonian (Washington)</strong>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="máquina-de-pascal-1642" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="máquina-de-pascal-1642"><span class="header-section-number">1.6.3</span> 🧠 Máquina de Pascal (1642)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pascaline.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Pascaline — calculadora mecânica de Blaise Pascal"></p>
+</figure>
+</div>
+<p>Aos 19 anos, <strong>Blaise Pascal</strong> construiu a <strong>Pascaline</strong>, capaz de <strong>somar e subtrair automaticamente</strong> com engrenagens.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="⚙️ Legado histórico">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+⚙️ Legado histórico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Primeira <strong>calculadora comercial funcional</strong>.<br>
+Exemplares no <strong>Musée des Arts et Métiers (Paris)</strong> e no <strong>Zwinger (Dresden)</strong>.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="linha-do-tempo-raízes-da-computação" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="linha-do-tempo-raízes-da-computação"><span class="header-section-number">1.7</span> 🕰️ Linha do Tempo — Raízes da Computação</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/linha-do-tempo-raizes-computacao-vertical.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Linha do tempo vertical dos marcos iniciais da computação"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Clique para ver o código (Python) — Linha do Tempo Vertical">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Clique para ver o código (Python) — Linha do Tempo Vertical
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="abe9e8f0" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gera: images/linha-do-tempo-raizes-computacao-vertical.png e .svg</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Circle</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.lines <span class="im">import</span> Line2D</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> [</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Osso de Ishango"</span>, <span class="st">"c. 20 000 a.C."</span>, <span class="st">"L"</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Ábaco Sumério"</span>, <span class="st">"c. 2400 a.C."</span>, <span class="st">"R"</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Ábaco Chinês (Suanpan)"</span>, <span class="st">"c. 500 a.C."</span>, <span class="st">"L"</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Máquina de Anticítera"</span>, <span class="st">"c. 100 a.C."</span>, <span class="st">"R"</span>),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Bastões de Napier"</span>, <span class="st">"1617"</span>, <span class="st">"L"</span>),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Régua de Cálculo"</span>, <span class="st">"1632"</span>, <span class="st">"R"</span>),</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Máquina de Pascal"</span>, <span class="st">"1642"</span>, <span class="st">"L"</span>),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>bg <span class="op">=</span> <span class="st">"#121316"</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>timeline_color <span class="op">=</span> <span class="st">"#6ea8fe"</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>label_color <span class="op">=</span> <span class="st">"#f1f1f1"</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>node_colors <span class="op">=</span> [<span class="st">"#8b8dfb"</span>, <span class="st">"#75a7ff"</span>, <span class="st">"#57c0b6"</span>, <span class="st">"#6fd17a"</span>, <span class="st">"#e8c06f"</span>, <span class="st">"#f3a065"</span>, <span class="st">"#f17a54"</span>]</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="fl">15.5</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(bg)<span class="op">;</span> fig.patch.set_facecolor(bg)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>x_center <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>y_top, y_bot <span class="op">=</span> <span class="fl">0.92</span>, <span class="fl">0.10</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(items)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>ys <span class="op">=</span> [y_top <span class="op">-</span> i <span class="op">*</span> ((y_top <span class="op">-</span> y_bot)<span class="op">/</span>(n<span class="op">-</span><span class="dv">1</span>)) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>ax.add_line(Line2D([x_center, x_center], [y_bot, y_top], lw<span class="op">=</span><span class="dv">6</span>, color<span class="op">=</span>timeline_color, alpha<span class="op">=</span><span class="fl">0.9</span>, solid_capstyle<span class="op">=</span><span class="st">"round"</span>))</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.5</span>, <span class="fl">0.965</span>, <span class="st">"Raízes da Computação"</span>, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">24</span>, color<span class="op">=</span>label_color, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ((label, date, side), y) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(items, ys)):</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(Circle((x_center, y), <span class="fl">0.008</span>, color<span class="op">=</span>node_colors[i], ec<span class="op">=</span><span class="st">"none"</span>))</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> side <span class="op">==</span> <span class="st">"L"</span>:</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        x_text <span class="op">=</span> x_center <span class="op">-</span> <span class="fl">0.02</span><span class="op">;</span> ha <span class="op">=</span> <span class="st">"right"</span><span class="op">;</span> x_tick <span class="op">=</span> x_center <span class="op">-</span> <span class="fl">0.015</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        x_text <span class="op">=</span> x_center <span class="op">+</span> <span class="fl">0.02</span><span class="op">;</span> ha <span class="op">=</span> <span class="st">"left"</span><span class="op">;</span>  x_tick <span class="op">=</span> x_center <span class="op">+</span> <span class="fl">0.015</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    ax.add_line(Line2D([x_center, x_tick], [y, y], lw<span class="op">=</span><span class="fl">2.5</span>, color<span class="op">=</span>node_colors[i]))</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    ax.text(x_text, y <span class="op">+</span> <span class="fl">0.018</span>, date, ha<span class="op">=</span>ha, va<span class="op">=</span><span class="st">"bottom"</span>, fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span>label_color, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    ax.text(x_text, y <span class="op">-</span> <span class="fl">0.002</span>, label, ha<span class="op">=</span>ha, va<span class="op">=</span><span class="st">"top"</span>, fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span>label_color)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.5</span>, <span class="fl">0.04</span>, <span class="st">"História da Computação — Parte 1"</span>, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">"#b8b8b8"</span>)</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">;</span> ax.set_ylim(<span class="dv">0</span>,<span class="dv">1</span>)<span class="op">;</span> ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/linha-do-tempo-raizes-computacao-vertical.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>, facecolor<span class="op">=</span>fig.get_facecolor())</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/linha-do-tempo-raizes-computacao-vertical.svg"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>, facecolor<span class="op">=</span>fig.get_facecolor())</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Síntese.</strong> Da abstração pré-histórica ao cálculo mecânico, esses artefatos mostram a jornada humana rumo à <strong>mecanização do pensamento lógico</strong>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="quiz-as-raízes-da-computação" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="quiz-as-raízes-da-computação"><span class="header-section-number">1.8</span> 🧩 Quiz — As Raízes da Computação</h2>
+<div class="question">
+<p><strong>Q1.</strong> Qual das opções abaixo descreve melhor o significado histórico do ábaco?</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Um brinquedo usado em rituais antigos.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Um instrumento de cálculo que representou operações mentais em forma física.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Um sistema de numeração binária usado pelos gregos.</p><p></p>
 </div>
 </div>
 
+</div>
+</div>
+<div class="question">
+<p><strong>Q2.</strong> Por que a Máquina de Anticítera é considerada um marco?</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Porque usava eletricidade para calcular.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Porque era apenas um calendário solar.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Porque utilizava engrenagens mecânicas para prever fenômenos astronômicos — uma forma analógica de computação.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<hr>
+</section>
+<section id="referências-rápidas" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="referências-rápidas"><span class="header-section-number">1.9</span> Referências Rápidas</h2>
+<ul>
+<li>Freeth et al.&nbsp;<em>The Antikythera Mechanism</em>. <em>Nature</em>, 2006.<br>
+</li>
+<li>Ifrah, G. <em>A História Universal dos Números</em>.</li>
+</ul>
+<hr>
+<p>📘 <strong>Próximo capítulo:</strong> 👉 <a href="parte-2-era-mecanica.qmd">Parte 2 — Era Mecânica</a></p>
+<p><a href="../index.html">← História da Computação</a> · <a href="../index.html">← Início</a> · 🔝 <a href="#top">Topo</a></p>
+<p><em>Blog do Marcellini — Explorando a História da Computação com Rigor e Beleza.</em></p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -244,12 +885,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -293,7 +934,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/SEU_USUARIO\.github\.io\/historia-computacao");
+      var filterRegex = new RegExp("https:\/\/historia\.blogdomarcellini\.com\.br");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -625,7 +1266,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© {year} Blog do Marcellini</p>
+<p>© 2025 Celso Marcellini — <a href="https://blogdomarcellini.com.br">Blog do Marcellini</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -640,4 +1281,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 <script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>
