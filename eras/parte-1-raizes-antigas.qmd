@@ -12,7 +12,7 @@ format:
   html:
     toc: true
     number-sections: true
-    theme: cosmo
+    theme: darkly
     css:
       - ../styles/custom.css
     fig-align: center
@@ -61,19 +61,23 @@ O que importa é o salto cognitivo: ali surge a **ideia de registro**, o ato de 
 
 :::
 
+::: {.callout-note title="📦 Do token ao texto — contar antes de escrever"}
+Muito antes da escrita cuneiforme, o Crescente Fértil usava **fichas de argila (tokens)** para registrar bens (grãos, rebanhos). Ao longo de milênios, esses tokens evoluíram para **marcas em tábuas** e, por fim, para a **escrita** — um arco em que **contar/registrar** precede **escrever**. É a proto-história dos nossos **bancos de dados**.
+:::
+
 ---
 
 ## 🦴 Osso de Ishango (c. 20 000 a.C.)
 
 O **Osso de Ishango**, descoberto em 1950 pelo arqueólogo **Jean de Heinzelin de Braucourt**, apresenta **três colunas de entalhes verticais** agrupados em padrões numéricos não aleatórios.  
-Pesquisas revelaram sequências como **3–6–4–8**, **10–5–5–10** e até **11–13–17–19**, correspondendo a **números primos entre 10 e 20** — um **sistema lógico de contagem**, talvez um **calendário lunar**.
+Pesquisas evidenciam **regularidade matemática**, com **agrupamentos e possíveis dobramentos (2×)**; alguns autores sugerem relações com **base 12**. Há propostas de que certas sequências remetam a **números primos entre 10 e 20**, mas essa leitura é **disputada**. O consenso prudente: tratava-se de um **instrumento de contagem/registro**, não prova direta de teoria de primos.
 
-O artefato mostra pela primeira vez o raciocínio matemático **materializado em um objeto físico**.  
+O artefato mostra o raciocínio matemático **materializado em um objeto físico**.  
 Guardado no **Real Instituto de Ciências Naturais da Bélgica**, simboliza o nascimento da **consciência numérica**.
 
 ::: {.callout-note title="💡 Curiosidade e legado"}
 
-O Osso de Ishango é considerado o **primeiro artefato matemático da história** e, simbolicamente, o **primeiro “dispositivo de armazenamento de dados”** humano.
+O Osso de Ishango é frequentemente citado como um dos **primeiros artefatos matemáticos** e, simbolicamente, um **“dispositivo de armazenamento de dados”** humano.
 
 :::
 
@@ -123,9 +127,9 @@ def draw_column(x, groups, color, label, y0=0.17, annotate_side="auto"):
         ax.text(x + side*0.058, cy, str(g), ha="center", va="center", fontsize=10.5, color=fg)
     return y0, y_max
 
-a_min, a_max = draw_column(x_positions[0], col_A, col_colors[0], "A (primos)", annotate_side="right")
+a_min, a_max = draw_column(x_positions[0], col_A, col_colors[0], "A (interpretações)", annotate_side="right")
 b_min, b_max = draw_column(x_positions[1], col_B, col_colors[1], "B (grupos aritméticos)", annotate_side="right")
-c_min, c_max = draw_column(x_positions[2], col_C, col_colors[2], "C (somas notáveis)", annotate_side="left")
+c_min, c_max = draw_column(x_positions[2], col_C, col_colors[2], "C (somas/ciclos)", annotate_side="left")
 
 y_min, y_max = min(a_min,b_min,c_min), max(a_max,b_max,c_max)
 ax.add_patch(Rectangle((0.10, y_min - 0.030), 0.80, (y_max - y_min) + 0.060,
@@ -134,7 +138,7 @@ ax.add_patch(Rectangle((0.10, y_min - 0.030), 0.80, (y_max - y_min) + 0.060,
 ax.text(0.5, y_max + 0.065, "Osso de Ishango — Entalhes e Padrões",
         ha="center", va="bottom", fontsize=16.5, color=fg, weight="bold")
 ax.text(0.5, y_min - 0.068,
-        "Padrões: primos (A), duplicações (B) e somas/ciclos (C). Reconstrução didática.",
+        "Padrões: agrupamentos/duplicações e possíveis leituras (ex.: base 12). Reconstrução didática.",
         ha="center", va="top", fontsize=10.2, color=subtle)
 
 ax.set_xlim(0,1); ax.set_ylim(0,1); ax.axis("off")
@@ -143,12 +147,11 @@ plt.savefig("images/ishango-diagrama-colunas.png", dpi=300, bbox_inches="tight",
 plt.savefig("images/ishango-diagrama-colunas.svg", dpi=300, bbox_inches="tight", facecolor=fig.get_facecolor())
 plt.close()
 ```
+
 :::
 
 ::: {.callout-note}
-
-**Leitura do diagrama.** As três colunas representam (A) primos; (B) duplicações e repetições; (C) somas/totalizações.
-
+**Leitura do diagrama.** As três colunas mostram **regularidade** (agrupamentos e possíveis dobramentos). Leituras variam; evite certezas excessivas.
 :::
 
 ---
@@ -163,10 +166,12 @@ Eles permitiram que a mente humana se projetasse no mundo, transformando **pensa
 - **Tábuas de cálculo** — registros de transações e somas.
 
 ::: {.callout-note title="💡 Ideia-chave"}
-
 Esses dispositivos inauguram a **interface homem-máquina**: o cálculo mental ganhou forma física.
-
 :::
+
+## 0️⃣ O golpe de gênio: notação posicional e o zero
+
+Muito do que chamamos “computação” só decola quando números ganham **posições** e o **zero** vira **número** com regras próprias. Na Índia clássica, **Brahmagupta (628)** formaliza regras com **zero e negativos**; séculos depois, **al-Khwārizmī** difunde essa notação **indo-arábica** no mundo islâmico e, via traduções latinas, para a Europa — de onde nasce até a palavra **algoritmo** (*Algoritmi de numero Indorum*).
 
 ---
 
@@ -246,86 +251,23 @@ plt.close()
 :::
 
 ::: {.callout-note}
-
 **Como ler.** Cada linha horizontal é uma ordem (unidades, dezenas…); mover pedrinhas entre linhas altera o valor.
-
 :::
+
+---
+
+## 🪨 Tábua de Salamina (c. 300 a.C.)
+
+Um *counting board* grego de mármore (um **abax**), usado com pedrinhas móveis para cálculo posicional — ponte entre sulcos/pedrinhas e os ábacos com contas.  
+Peça no **Museu Epigráfico de Atenas**.
 
 ---
 
 ## 🧮 Ábaco Chinês (Suanpan, c. 500 a.C.)
 
-![](images/abaco-chines.jpg){fig-align="center" width="70%" alt="Suanpan chinês tradicional"}
+![](images/abaco-chines-diagrama.png){fig-align="center" width="72%" alt="Diagrama didático de um suanpan (ábaco chinês) com configuração 2:5"}
 
-Escavações em Sichuan e Henan revelaram versões antigas do *suanpan*, desde a dinastia Han.  
-Com **duas contas superiores (5)** e **cinco inferiores (1)**, realizava todas as operações aritméticas.
-
-::: {.callout-note title="🌏 Influência cultural"}
-Inspirou o **soroban japonês** e o **ábaco russo (schoty)**.  
-Exemplares no **Museu Nacional da China** e no **Museu de Xangai**.
-:::
-
----
-
-## ⚙️ Máquina de Anticítera (c. 100 a.C.)
-
-![](images/antikythera-device.jpg){fig-align="center" width="70%" alt="Mecanismo de Anticítera — reconstrução moderna"}
-
-Descoberta em 1901 num naufrágio perto da ilha de Anticítera, essa engenhoca de bronze é o **primeiro computador analógico** conhecido.  
-Calculava **posições planetárias e eclipses**, unindo astronomia, matemática e mecânica.
-
-::: {.callout-note title="🔭 Marco da engenharia antiga"}
-
-Fragmentos originais no **Museu Arqueológico Nacional de Atenas**.
-
-:::
-
----
-
-### 📏 Bastões de Napier (1617)
-
-![](images/bastoes-napier.jpg){fig-align="center" width="70%" alt="Bastões de Napier em caixa de madeira"}
-
-Inventados por **John Napier**, criador dos **logaritmos**, automatizavam multiplicações com varas numeradas.
-
-::: {.callout-note title="💡 Impacto matemático"}
-Antepassados da **régua de cálculo**.  
-Originais na **Biblioteca Nacional da Escócia** e em Oxford.
-:::
-
----
-
-### 📐 Régua de Cálculo (1632)
-
-![](images/regua-calculo.jpg){fig-align="center" width="70%" alt="Régua de cálculo clássica"}
-
-Criada por **William Oughtred**, transformava **multiplicações em somas** por escalas deslizantes.
-
-::: {.callout-note title="🧮 Símbolo da era pré-digital"}
-Base do cálculo analógico moderno.  
-Modelos no **Science Museum (Londres)** e no **Smithsonian (Washington)**.
-:::
-
----
-
-### 🧠 Máquina de Pascal (1642)
-
-![](images/pascaline.jpg){fig-align="center" width="70%" alt="Pascaline — calculadora mecânica de Blaise Pascal"}
-
-Aos 19 anos, **Blaise Pascal** construiu a **Pascaline**, capaz de **somar e subtrair automaticamente** com engrenagens.
-
-::: {.callout-note title="⚙️ Legado histórico"}
-Primeira **calculadora comercial funcional**.  
-Exemplares no **Musée des Arts et Métiers (Paris)** e no **Zwinger (Dresden)**.
-:::
-
----
-
-## 🕰️ Linha do Tempo — Raízes da Computação
-
-![](images/linha-do-tempo-raizes-computacao-vertical.png){fig-align="center" width="80%" alt="Linha do tempo vertical dos marcos iniciais da computação"}
-
-::: {.callout-important collapse=true title="Clique para ver o código (Python) — Linha do Tempo Vertical"}
+::: {.callout-important collapse=true title="Clique para ver o código (Python) — Diagrama do Suanpan (2:5)"}
 ```{python}
 # Gera: images/linha-do-tempo-raizes-computacao-vertical.png e .svg
 
@@ -382,6 +324,140 @@ plt.close()
 ```
 :::
 
+::: {.callout-note title="⚙️ Configuração do suanpan"}
+A forma clássica tem **2 contas superiores (5 cada)** e **5 inferiores (1 cada)** por haste (**2:5**).  
+O **soroban** japonês posterior adota **1:4**, otimizado para cálculos rápidos.
+:::
+
+---
+
+## 🧵 Tecnologias de registro nas Américas — Quipu andino
+
+:::{.callout-note title="🧵 Quipu (Andes, c. 1º milênio d.C.–séc. XVI)"}
+Sistema de **cordões com nós** em **base decimal posicional**, usado para **censos, tributos e calendários**; há pesquisas sobre **informação não numérica**, ainda **em debate**.
+:::
+
+---
+
+## ⚙️ Máquina de Anticítera (c. 100 a.C.)
+
+![](images/antikythera-device.png){fig-align="center" width="70%" alt="Mecanismo de Anticítera — reconstrução moderna"}
+
+Descoberta em 1901 num naufrágio perto da ilha de Anticítera, essa engenhoca de bronze é o **primeiro computador analógico** conhecido.  
+Calculava **posições planetárias e eclipses**, unindo astronomia, matemática e mecânica.
+
+::: {.callout-note title="🔭 Marco da engenharia antiga"}
+Fragmentos originais no **Museu Arqueológico Nacional de Atenas**.
+:::
+
+> Estudos de tomografia e modelagem recentes mostram dials para o **ciclo de Saros (223 meses)** e reconstruções do trem de engrenagens para **Lua/planetas**, consolidando o status de **computador astronômico** capaz de **predizer eclipses**.
+
+---
+
+### 📏 Bastões de Napier (1617)
+
+![](images/bastoes-napier.jpg){fig-align="center" width="70%" alt="Bastões de Napier em caixa de madeira"}
+
+Inventados por **John Napier**, criador dos **logaritmos**, automatizavam multiplicações com varas numeradas.
+
+::: {.callout-note title="💡 Impacto matemático"}
+Antepassados da **régua de cálculo**.  
+Originais na **Biblioteca Nacional da Escócia** e em Oxford.
+:::
+
+---
+
+### 📐 Régua de Cálculo (1632)
+
+![](images/regua-calculo.jpg){fig-align="center" width="70%" alt="Régua de cálculo clássica"}
+
+Criada por **William Oughtred**, transformava **multiplicações em somas** por escalas deslizantes.
+
+::: {.callout-note title="🧮 Símbolo da era pré-digital"}
+Base do cálculo analógico moderno.  
+Modelos no **Science Museum (Londres)** e no **Smithsonian (Washington)**.
+:::
+
+---
+
+### 🧠 Máquina de Pascal (1642)
+
+![](images/pascaline.jpg){fig-align="center" width="70%" alt="Pascaline — calculadora mecânica de Blaise Pascal"}
+
+Aos 19 anos, **Blaise Pascal** construiu a **Pascaline**, capaz de **somar e subtrair automaticamente** com engrenagens.
+
+::: {.callout-note title="⚙️ Legado histórico"}
+Primeira **calculadora comercial funcional**.  
+Exemplares no **Musée des Arts et Métiers (Paris)** e no **Zwinger (Dresden)**.
+:::
+
+> **Napier (1617)** → **logaritmos** e **Bastões** (multiplicação por adições); **Oughtred (1632)** → **régua de cálculo**, que dominará a engenharia até as calculadoras eletrônicas.
+
+---
+
+## 🕰️ Linha do Tempo — Raízes da Computação
+
+![](images/linha-do-tempo-raizes-computacao-vertical.png){fig-align="center" width="80%" alt="Linha do tempo vertical dos marcos iniciais da computação"}
+
+::: {.callout-important collapse=true title="Clique para ver o código (Python) — Linha do Tempo Vertical"}
+```{python}
+# Gera: images/linha-do-tempo-raizes-computacao-vertical.png e .svg
+
+import os
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle
+from matplotlib.lines import Line2D
+
+items = [
+    ("Osso de Ishango", "c. 20 000 a.C.", "L"),
+    ("Ábaco Sumério", "c. 2400 a.C.", "R"),
+    ("Tábua de Salamina", "c. 300 a.C.", "L"),
+    ("Ábaco Chinês (Suanpan)", "c. 500 a.C.", "R"),
+    ("Máquina de Anticítera", "c. 100 a.C.", "L"),
+    ("Bastões de Napier", "1617", "R"),
+    ("Régua de Cálculo", "1632", "L"),
+    ("Máquina de Pascal", "1642", "R"),
+]
+
+os.makedirs("images", exist_ok=True)
+
+bg = "#121316"
+timeline_color = "#6ea8fe"
+label_color = "#f1f1f1"
+node_colors = ["#8b8dfb", "#75a7ff", "#57c0b6", "#6fd17a", "#e8c06f", "#f3a065", "#f17a54", "#9c7cff"]
+
+fig = plt.figure(figsize=(8, 15.5), dpi=300)
+ax = plt.gca()
+ax.set_facecolor(bg); fig.patch.set_facecolor(bg)
+
+x_center = 0.5
+y_top, y_bot = 0.92, 0.08
+n = len(items)
+ys = [y_top - i * ((y_top - y_bot)/(n-1)) for i in range(n)]
+
+ax.add_line(Line2D([x_center, x_center], [y_bot, y_top], lw=6, color=timeline_color, alpha=0.9, solid_capstyle="round"))
+ax.text(0.5, 0.965, "Raízes da Computação", ha="center", va="center", fontsize=24, color=label_color, weight="bold")
+
+for i, ((label, date, side), y) in enumerate(zip(items, ys)):
+    ax.add_patch(Circle((x_center, y), 0.008, color=node_colors[i], ec="none"))
+    if side == "L":
+        x_text = x_center - 0.02; ha = "right"; x_tick = x_center - 0.015
+    else:
+        x_text = x_center + 0.02; ha = "left";  x_tick = x_center + 0.015
+    ax.add_line(Line2D([x_center, x_tick], [y, y], lw=2.5, color=node_colors[i]))
+    ax.text(x_text, y + 0.018, date, ha=ha, va="bottom", fontsize=13, color=label_color, weight="bold")
+    ax.text(x_text, y - 0.002, label, ha=ha, va="top", fontsize=13, color=label_color)
+
+ax.text(0.5, 0.04, "História da Computação — Parte 1", ha="center", va="center", fontsize=10, color="#b8b8b8")
+
+ax.set_xlim(0,1); ax.set_ylim(0,1); ax.axis("off")
+plt.savefig("images/linha-do-tempo-raizes-computacao-vertical.png", dpi=300, bbox_inches="tight", facecolor=fig.get_facecolor())
+plt.savefig("images/linha-do-tempo-raizes-computacao-vertical.svg", dpi=300, bbox_inches="tight", facecolor=fig.get_facecolor())
+plt.close()
+```
+
+:::
+
 ::: {.callout-tip}
 **Síntese.** Da abstração pré-histórica ao cálculo mecânico, esses artefatos mostram a jornada humana rumo à **mecanização do pensamento lógico**.
 :::
@@ -434,9 +510,16 @@ Porque utilizava engrenagens mecânicas para prever fenômenos astronômicos —
 
 ---
 
-## Referências Rápidas
-- Freeth et al. *The Antikythera Mechanism*. *Nature*, 2006.  
-- Ifrah, G. *A História Universal dos Números*.
+## Referências Rápidas (seleção comentada)
+
+- Freeth, T. et al. — estudos de tomografia/modelagem do **Mecanismo de Anticítera** (dials, ciclos e trem de engrenagens).  
+- Pletser, V.; Huylebrouck, D.; RBINS — leituras e cautelas sobre o **Osso de Ishango** (regularidade, base 12, controvérsias sobre primos).  
+- Schmandt-Besserat, D. — **tokens mesopotâmicos**: da contagem à escrita.  
+- Documentação histórica e museológica de **suanpan/soroban**.  
+- **Tábua de Salamina** — *counting board* grega (abax) como elo evolutivo.  
+- **Quipu (khipu)** — registro decimal posicional andino; usos administrativos e debates sobre informação não numérica.  
+- **Napier / Oughtred** — logaritmos, Bastões e a **régua de cálculo** na transição ao cálculo analógico moderno.  
+- **Zero e notação indo-arábica** — de Brahmagupta a al-Khwārizmī, fundamento dos **algoritmos**.
 
 ---
 
@@ -445,4 +528,5 @@ Porque utilizava engrenagens mecânicas para prever fenômenos astronômicos —
 [← História da Computação](../index.qmd) · [← Início](/index.qmd) · 🔝 [Topo](#top)
 
 *Blog do Marcellini — Explorando a História da Computação com Rigor e Beleza.*
+::contentReference[oaicite:0]{index=0}
 
