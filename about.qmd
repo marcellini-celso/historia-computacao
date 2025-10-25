@@ -1,6 +1,26 @@
 ---
-title: "Sobre o Projeto"
+title: "Sobre"
+lang: pt-BR
+page-layout: full
 ---
 
-Este site compila uma **linha do tempo comentada** da computação: dispositivos, ideias, linguagens, redes e inteligência artificial — em português e com foco didático.
+## ℹ️ Sobre o Projeto
+
+O site **História da Computação** nasceu da proposta de unir **ciência, filosofia e narrativa**, explorando como o pensamento humano se tornou código.
+
+> “Toda máquina reflete o sonho de quem a imaginou.”
+
+---
+
+### 👨‍💻 Autor
+**Celso Marcellini** — pesquisador, educador e criador do *Blog do Marcellini*.
+
+[🌐 blogdomarcellini.com.br](https://blogdomarcellini.com.br)  
+[✉️ contato@blogdomarcellini.com.br](mailto:contato@blogdomarcellini.com.br)
+
+---
+
+### 🧾 Créditos e Licença
+Textos e imagens sob licença **CC BY-NC-ND 4.0**.  
+O projeto utiliza Quarto, CSS personalizado e arte gerada com apoio de IA generativa.
 

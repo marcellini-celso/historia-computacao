@@ -1,41 +1,56 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - images/**
 
 website:
   title: "História da Computação"
   description: "Da contagem em ossos aos LLMs — uma viagem pelas eras da computação."
-  site-url: https://SEU_USUARIO.github.io/historia-computacao
+  site-url: https://historia.blogdomarcellini.com.br
   favicon: images/favicon.png
+  search: true
   navbar:
+    background: dark
     left:
       - text: "Início"
         href: index.qmd
-      - text: "Eras"
+      - text: "📜 Eras"
         menu:
-          - text: "Raízes Antigas"
+          - text: "1️⃣ Raízes Antigas"
             href: eras/parte-1-raizes-antigas.qmd
-          - text: "Era Mecânica"
+          - text: "2️⃣ Era Mecânica"
             href: eras/parte-2-era-mecanica.qmd
-          - text: "Era Digital"
+          - text: "3️⃣ Era Digital"
             href: eras/parte-3-era-digital.qmd
-          - text: "Revolução Pessoal"
+          - text: "4️⃣ Revolução Pessoal"
             href: eras/parte-4-revolucao-pessoal.qmd
-          - text: "Era das Redes"
+          - text: "5️⃣ Era das Redes"
             href: eras/parte-5-era-das-redes.qmd
-          - text: "Era da Inteligência"
+          - text: "6️⃣ Era da Inteligência"
             href: eras/parte-6-era-da-inteligencia.qmd
-      - text: "Linguagens"
+      - text: "🧮 Linguagens"
         href: linguagens/index.qmd
-      - text: "Hardware"
+      - text: "💾 Hardware"
         href: hardware/index.qmd
-      - text: "IA"
+      - text: "🤖 Inteligência Artificial"
         href: inteligencia-artificial/index.qmd
-      - text: "Sobre"
+      - text: "🧠 Sistemas"
+        href: sistemas/index.qmd
+      - text: "🏭 Empresas"
+        href: empresas/index.qmd
+      - text: "ℹ️ Sobre"
         href: about.qmd
   page-footer:
-    left: "© {year} Blog do Marcellini"
+    left: © 2025 Celso Marcellini — [Blog do Marcellini](https://blogdomarcellini.com.br)
     right: "Feito com Quarto"
+
+language:
+  on-this-page: "📑 Sumário"
+  toc-title: "📑 Sumário"
+  back-to-top: "⬆️ Voltar ao topo"
+  section-title: "Nesta seção"
+  related-links-title: "Veja também"
 
 format:
   html:
@@ -48,4 +63,6 @@ format:
     smooth-scroll: true
     fig-align: center
     highlight-style: github-dark
+    filters:
+      - naquiz
 

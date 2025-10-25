@@ -1,24 +1,134 @@
 ---
 title: "História da Computação"
+title-block-style: none     # oculta o título automático do Quarto
+lang: pt-BR
 page-layout: full
+format:
+  html:
+    theme: darkly
+    toc: false
+    css:
+      - styles/custom.css
+resources:
+  - images/banner-historia-computacao.png
 ---
 
-::: {.hero}
-# História da Computação
-
-**Da contagem em ossos aos modelos de linguagem — como a humanidade aprendeu a pensar com máquinas.**
-
-Explore as eras, pessoas, linguagens e máquinas que moldaram o mundo digital.
+::: {.hero-banner}
+![](images/banner-historia-computacao.png)
 :::
 
-:::{.callout-tip}
-### Comece por aqui
-- [Raízes Antigas](eras/parte-1-raizes-antigas.qmd)  
-- [Era Digital](eras/parte-3-era-digital.qmd)  
-- [LLMs — Introdução](inteligencia-artificial/index.qmd)
+<div class="intro-block">
+> Da contagem em ossos ao aprendizado de máquina — como transformamos ideias em algoritmos, e algoritmos em civilizações.
+
+> **“A questão não é se as máquinas podem pensar, mas se podemos entender o que significa pensar.”**[^turing]
+</div>
+
+[^turing]: Paráfrase inspirada em **Alan Turing (1950)** — *“Computing Machinery and Intelligence”*, *Mind*, 59(236), 433–460.
+
+
+---
+
+## 🧭 Explore por Eras
+
+| Era | Descrição |
+|:----|:-----------|
+| [**1️⃣ Raízes Antigas**](eras/parte-1-raizes-antigas.qmd) | Ábacos, numeração e a Máquina de Anticítera — quando o cálculo ganha corpo físico. |
+| [**2️⃣ Era Mecânica**](eras/parte-2-era-mecanica.qmd) | De Pascal e Leibniz a Babbage e Lovelace — o sonho das máquinas de pensar. |
+| [**3️⃣ Era Digital**](eras/parte-3-era-digital.qmd) | Lógica, bits e Von Neumann — o nascimento da computação moderna. |
+| [**4️⃣ Revolução Pessoal**](eras/parte-4-revolucao-pessoal.qmd) | PCs, interfaces gráficas e cultura hacker — o computador vai para casa. |
+| [**5️⃣ Era das Redes**](eras/parte-5-era-das-redes.qmd) | Internet, web e dispositivos móveis — o mundo interligado. |
+| [**6️⃣ Era da Inteligência**](eras/parte-6-era-da-inteligencia.qmd) | IA simbólica, deep learning e LLMs — o software aprende. |
+
+---
+
+<div class="section-intro">
+💡 <strong>Além das eras</strong>, explore seções complementares que aprofundam a história e as tecnologias por trás da computação moderna:
+</div>
+
+---
+
+## 💡 Seções em Destaque
+
+
+- [🧮 **Linguagens**](linguagens/index.qmd)  
+  Da lógica de Fortran à elegância de Python — paradigmas, estilos e ideias por trás da sintaxe.
+
+- [🤖 **Inteligência Artificial**](inteligencia-artificial/index.qmd)  
+  Do simbólico aos modelos generativos — fundamentos, aplicações e desafios éticos.
+
+- [💾 **Hardware**](hardware/index.qmd)  
+  Arquiteturas, chips e dispositivos que materializam o cálculo.
+
+---
+
+:::{.callout-tip collapse="false"}
+### 📘 Guia de Leitura — *clique para fechar*
+
+**Rota Histórica (linha do tempo)**
+
+1. [Raízes Antigas](eras/parte-1-raizes-antigas.qmd) → 2. [Era Mecânica](eras/parte-2-era-mecanica.qmd) →  3. [Era Digital](eras/parte-3-era-digital.qmd) → 4. [Revolução Pessoal](eras/parte-4-revolucao-pessoal.qmd) →  5. [Era das Redes](eras/parte-5-era-das-redes.qmd) → 6. [Era da Inteligência](eras/parte-6-era-da-inteligencia.qmd)
+
+**Rota Técnica (para devs e arquitetos)**
+
+1. [Era Digital](eras/parte-3-era-digital.qmd) → 2. [Sistemas](sistemas/index.qmd) →  3. [Linguagens](linguagens/index.qmd) → 4. [Hardware](hardware/index.qmd) →  5. [IA — Visão geral](inteligencia-artificial/index.qmd)
+
+**Rota IA (do zero ao LLM)**
+
+1. [IA — Visão geral](inteligencia-artificial/index.qmd) → 2. [LLMs (hub)](inteligencia-artificial/llms.qmd) →  3. Transformers → 4. Treinamento e RLHF → 5. Ética e sociedade
+
+**Rota Rápida (≈ 1 hora)**
+
+1. [Raízes Antigas](eras/parte-1-raizes-antigas.qmd) *(resumo)* →  2. [Era Digital](eras/parte-3-era-digital.qmd) *(resumo)* →  3. LLMs (hub) → 4. Quiz final
+
+**Leitura Paralela (contexto e cultura)**
+
+- [Empresas](empresas/index.qmd): Bell Labs, IBM, Xerox PARC, Apple, Google  
+- Volte aos capítulos para ver **como as empresas moldaram cada era**.
+
 :::
 
-:::{.callout-note}
-> **“A questão não é se as máquinas podem pensar, mas se podemos entender o que significa pensar.”**
+---
+
+## 🕰️ Linha do Tempo
+
+:::{.timeline}
+- **c. 2400 a.C.** — Ábaco surge em diferentes culturas  
+- **1843** — Ada Lovelace escreve o primeiro algoritmo  
+- **1936** — Alan Turing formaliza a computação  
+- **1945** — Arquitetura von Neumann  
+- **1969** — ARPANET conecta universidades  
+- **2017** — Transformers revolucionam o NLP  
+- **2020–2025** — LLMs e IA generativa em escala
 :::
+
+
+---
+
+::: {.credits}
+Imagens e composições produzidas com apoio de ferramentas de IA generativa.  
+Textos e curadoria histórica: **Celso Marcellini**.  
+:::
+
+---
+```{=html}
+<div class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ea8fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4"></path>
+        <path d="M4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6"></path>
+        <path d="M15 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9"></path>
+        <path d="M4.6 15a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1 2.83 2.83l.06-.06A1.65 1.65 0 0 0 9 19.4"></path>
+      </svg>
+      <span><strong>História da Computação</strong></span>
+    </div>
+
+    <p>Um projeto de <a href="https://blogdomarcellini.com.br" target="_blank">Blog do Marcellini</a></p>
+    <p>© 2025 Celso Marcellini. Todos os direitos reservados.</p>
+    <p><a href="https://github.com/marcellini-celso/historia-computacao" target="_blank">Ver no GitHub</a> · 
+       <a href="mailto:prof.marcellini@gmail.com">Contato</a></p>
+  </div>
+</div>
+```
 
