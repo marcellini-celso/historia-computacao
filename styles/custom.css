@@ -801,3 +801,22 @@ nav#toc, #TOC {
   }
 }
 
+/* Ajusta margens e padding das figuras (banner incluído) */
+.quarto-figure {
+  margin: 0 auto 0 auto !important; /* remove margens extras */
+  padding: 0 !important;             /* remove padding interno */
+}
+
+.quarto-figure img {
+  display: block;
+  margin: 0 auto !important;
+  border-radius: 12px;
+  max-height: 480px;     /* mantém proporção harmoniosa */
+  object-fit: cover;
+}
+
+img[alt*="Linha do tempo"] {
+  max-height: 850px;
+  width: auto !important;
+}
+
