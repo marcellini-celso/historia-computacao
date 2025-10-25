@@ -13,7 +13,7 @@ resources:
   - images/banner-historia-computacao.png
 ---
 
-![Banner da História da Computação](images/banner-historia-computacao.png){fig-align="center" width="100%" alt="Banner da História da Computação"}
+![](images/banner-historia-computacao.png){fig-align="center" width="100%" alt="Banner da História da Computação"}
 
 ::: {.hero-text}
 # História da Computação
