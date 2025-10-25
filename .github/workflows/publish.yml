@@ -17,27 +17,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Quarto fixado em versão estável
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: "1.5.57"
 
-      # >>> NOVO: Python para executar notebooks/chunks Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # >>> NOVO: Jupyter (e clientes) para executar chunks {python}
       - name: Install Jupyter
         run: |
           python -m pip install --upgrade pip
           python -m pip install jupyter nbclient nbformat jupyter-cache
 
-      # (opcional) Instale libs do seu projeto, se usadas nos .qmd:
-      # - name: Install project Python deps
-      #   run: python -m pip install numpy pandas matplotlib plotly
+      # 💡 NOVO: instala bibliotecas usadas nos .qmd (Matplotlib, NumPy etc.)
+      - name: Install project Python deps
+        run: |
+          python -m pip install matplotlib numpy pandas plotly seaborn tabulate qiskit
+
 
       - name: Show versions
         run: |
