@@ -820,3 +820,32 @@ img[alt*="Linha do tempo"] {
   width: auto !important;
 }
 
+img[alt*="Osso de Ishango"] {
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+img[alt*="Osso de Ishango"] {
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-bottom: 1em;
+}
+
+/* ==== Estilo para figuras museológicas e diagramas ==== */
+
+img[fig-cap], figure img {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 12px rgba(0,0,0,0.45);
+  margin: 1.5em auto;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.4em;
+}
+

@@ -75,6 +75,8 @@ Pesquisas evidenciam **regularidade matemática**, com **agrupamentos e possíve
 O artefato mostra o raciocínio matemático **materializado em um objeto físico**.  
 Guardado no **Real Instituto de Ciências Naturais da Bélgica**, simboliza o nascimento da **consciência numérica**.
 
+![](images/osso-ishango-real.jpg){fig-align="center" width="70%" alt="Fotografia real do Osso de Ishango" fig-cap="Osso de Ishango (c. 20 000 a.C.). Marfim fossilizado com três colunas de entalhes. Descoberto por Jean de Heinzelin de Braucourt. Coleção do Real Instituto de Ciências Naturais da Bélgica, Bruxelas."}
+
 ::: {.callout-note title="💡 Curiosidade e legado"}
 
 O Osso de Ishango é frequentemente citado como um dos **primeiros artefatos matemáticos** e, simbolicamente, um **“dispositivo de armazenamento de dados”** humano.
@@ -528,5 +530,4 @@ Porque utilizava engrenagens mecânicas para prever fenômenos astronômicos —
 [← História da Computação](../index.qmd) · [← Início](/index.qmd) · 🔝 [Topo](#top)
 
 *Blog do Marcellini — Explorando a História da Computação com Rigor e Beleza.*
-::contentReference[oaicite:0]{index=0}
 

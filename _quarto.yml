@@ -42,8 +42,8 @@ website:
       - text: "ℹ️ Sobre"
         href: about.qmd
   page-footer:
-    left: © 2025 Celso Marcellini — [Blog do Marcellini](https://blogdomarcellini.com.br)
-    right: "Feito com Quarto"
+    left: '© 2025 Celso Marcellini — <a href="https://blogdomarcellini.com.br" target="_blank">Blog do Marcellini</a>'
+    right: 'Feito com <a href="https://quarto.org" target="_blank">Quarto 🪶</a>'
 
 language:
   on-this-page: "📑 Sumário"
