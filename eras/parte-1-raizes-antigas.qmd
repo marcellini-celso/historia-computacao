@@ -31,8 +31,10 @@ resources:
 
 # 💾 Parte 1 — As Raízes Antigas
 
-> “Antes dos circuitos, vieram as ideias.  
-> Antes do silício, o cálculo era humano.”
+<div class="intro-block raizes">
+> **“Antes dos circuitos, vieram as ideias.  
+> Antes do silício, o cálculo era humano.”**
+</div>
 
 ---
 

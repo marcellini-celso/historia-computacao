@@ -1,0 +1,34 @@
+    ---
+title: "Parte 2 — Era Mecânica"
+description: "Conteúdo em desenvolvimento — Eras da Computação."
+author: "Blog do Marcellini"
+date: 2025-10-15
+lang: pt-BR
+categories: [história da computação, eras, cronologia]
+tags: [história, eras, linha do tempo]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+---
+
+    ## 🚧 Em construção
+
+    Este tópico (**Parte 2 — Era Mecânica**) faz parte da seção *Eras da Computação*  
+    e será publicado em breve como parte da série **História da Computação**.
+
+<div class="intro-block mecanica">
+> **“Mecânica e mente começaram a se confundir quando as engrenagens passaram a pensar.”**
+</div>
+
+
+    ---
+
+    [← Voltar ao índice da seção](index.qmd)
