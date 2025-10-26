@@ -849,3 +849,176 @@ figcaption {
   margin-top: 0.4em;
 }
 
+/* === Bloco de introdução / epígrafe === */
+.intro-block {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--brand, #6ea8fe);
+  border-radius: 8px;
+  padding: 1.4em 1.6em;
+  margin: 2.5em auto;
+  max-width: 900px;
+  color: var(--muted, #b8c1d4);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.intro-block strong {
+  color: var(--text, #e9eef7);
+}
+
+.intro-block em {
+  color: var(--accent, #f3a065);
+}
+
+.intro-block::before {
+  content: "💭 ";
+  font-size: 1.3rem;
+  color: var(--brand, #6ea8fe);
+  vertical-align: middle;
+}
+
+.intro-block blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.intro-block {
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================
+   Epígrafes — História da Computação (com gradientes por Era)
+   ========================================================== */
+
+/* Base geral */
+.intro-block {
+  border-left: 4px solid var(--brand, #6ea8fe);
+  border-radius: 8px;
+  padding: 1.4em 1.6em;
+  margin: 2.5em auto;
+  max-width: 900px;
+  color: var(--muted, #b8c1d4);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
+  animation: fadeIn 1.2s ease-out;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.intro-block strong {
+  color: var(--text, #e9eef7);
+}
+
+.intro-block em {
+  color: var(--accent, #f3a065);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================
+   Variações cromáticas e ícones por Era
+   ========================================================== */
+
+/* Parte 1 — Raízes Antigas */
+.intro-block.raizes::before {
+  content: "🏺 ";
+  font-size: 1.3rem;
+  color: #f3a065;
+  vertical-align: middle;
+}
+.intro-block.raizes {
+  border-left-color: #f3a065;
+  background: linear-gradient(135deg, rgba(243,160,101,0.08) 0%, rgba(70,50,30,0.12) 100%);
+}
+
+/* Parte 2 — Era Mecânica */
+.intro-block.mecanica::before {
+  content: "⚙️ ";
+  font-size: 1.3rem;
+  color: #6fd17a;
+  vertical-align: middle;
+}
+.intro-block.mecanica {
+  border-left-color: #6fd17a;
+  background: linear-gradient(135deg, rgba(111,209,122,0.08) 0%, rgba(25,50,30,0.12) 100%);
+}
+
+/* Parte 3 — Era Digital */
+.intro-block.digital::before {
+  content: "💾 ";
+  font-size: 1.3rem;
+  color: #6ea8fe;
+  vertical-align: middle;
+}
+.intro-block.digital {
+  border-left-color: #6ea8fe;
+  background: linear-gradient(135deg, rgba(110,168,254,0.10) 0%, rgba(20,35,60,0.14) 100%);
+}
+
+/* Parte 4 — Revolução Pessoal */
+.intro-block.pessoal::before {
+  content: "🖥️ ";
+  font-size: 1.3rem;
+  color: #9c7cff;
+  vertical-align: middle;
+}
+.intro-block.pessoal {
+  border-left-color: #9c7cff;
+  background: linear-gradient(135deg, rgba(156,124,255,0.08) 0%, rgba(45,35,70,0.14) 100%);
+}
+
+/* Parte 5 — Era das Redes */
+.intro-block.redes::before {
+  content: "🌐 ";
+  font-size: 1.3rem;
+  color: #57c0b6;
+  vertical-align: middle;
+}
+.intro-block.redes {
+  border-left-color: #57c0b6;
+  background: linear-gradient(135deg, rgba(87,192,182,0.08) 0%, rgba(25,50,55,0.14) 100%);
+}
+
+/* Parte 6 — Era da Inteligência */
+.intro-block.inteligencia::before {
+  content: "🤖 ";
+  font-size: 1.3rem;
+  color: #e8c06f;
+  vertical-align: middle;
+}
+.intro-block.inteligencia {
+  border-left-color: #e8c06f;
+  background: linear-gradient(135deg, rgba(232,192,111,0.08) 0%, rgba(60,50,20,0.12) 100%);
+}
+
+/* ===== Rodapé (page-footer) ===== */
+footer a {
+  color: #6ea8fe; /* azul suave padrão Quarto-darkly */
+  text-decoration: none;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+footer a:hover {
+  color: #9dc5ff; /* tom mais claro ao passar o mouse */
+  text-shadow: 0 0 6px rgba(110,168,254,0.6);
+}
+
+footer {
+  font-size: 0.95rem;
+  color: var(--muted, #b8c1d4);
+  letter-spacing: 0.02em;
+}
+

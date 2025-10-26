@@ -28,11 +28,11 @@
     "text": "🕰️ Linha do Tempo\n\n\nc. 2400 a.C. — Ábaco surge em diferentes culturas\n\n1843 — Ada Lovelace escreve o primeiro algoritmo\n\n1936 — Alan Turing formaliza a computação\n\n1945 — Arquitetura von Neumann\n\n1969 — ARPANET conecta universidades\n\n2017 — Transformers revolucionam o NLP\n\n2020–2025 — LLMs e IA generativa em escala\n\n\n\n\nImagens e composições produzidas com apoio de ferramentas de IA generativa.\nTextos e curadoria histórica: Celso Marcellini.\n\n\n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n      História da Computação\n    \n\n    Um projeto de Blog do Marcellini\n    © 2025 Celso Marcellini. Todos os direitos reservados.\n    Ver no GitHub · \n       Contato"
   },
   {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "História da Computação",
-    "section": "Notas de rodapé",
-    "text": "Notas de rodapé\n\n\nParáfrase inspirada em Alan Turing (1950) — “Computing Machinery and Intelligence”, Mind, 59(236), 433–460.↩︎"
+    "objectID": "eras/parte-4-revolucao-pessoal.html",
+    "href": "eras/parte-4-revolucao-pessoal.html",
+    "title": "Parte 4 — Revolução Pessoal",
+    "section": "",
+    "text": "## 🚧 Em construção\n\nEste tópico (**Parte 4 — Revolução Pessoal**) faz parte da seção *Eras da Computação*  \ne será publicado em breve como parte da série **História da Computação**.\n\n\n“Do mainframe ao bolso: o computador deixou de ser máquina para se tornar extensão do ser.”\n\n\n---\n\n[← Voltar ao índice da seção](index.qmd)"
   },
   {
     "objectID": "eras/parte-1-raizes-antigas.html",
@@ -124,6 +124,34 @@
     "title": "💾 Parte 1 — As Raízes Antigas",
     "section": "1.12 Referências Rápidas (seleção comentada)",
     "text": "1.12 Referências Rápidas (seleção comentada)\n\nFreeth, T. et al. — estudos de tomografia/modelagem do Mecanismo de Anticítera (dials, ciclos e trem de engrenagens).\n\nPletser, V.; Huylebrouck, D.; RBINS — leituras e cautelas sobre o Osso de Ishango (regularidade, base 12, controvérsias sobre primos).\n\nSchmandt-Besserat, D. — tokens mesopotâmicos: da contagem à escrita.\n\nDocumentação histórica e museológica de suanpan/soroban.\n\nTábua de Salamina — counting board grega (abax) como elo evolutivo.\n\nQuipu (khipu) — registro decimal posicional andino; usos administrativos e debates sobre informação não numérica.\n\nNapier / Oughtred — logaritmos, Bastões e a régua de cálculo na transição ao cálculo analógico moderno.\n\nZero e notação indo-arábica — de Brahmagupta a al-Khwārizmī, fundamento dos algoritmos.\n\n\n📘 Próximo capítulo: 👉 Parte 2 — Era Mecânica\n← História da Computação · ← Início · 🔝 Topo\nBlog do Marcellini — Explorando a História da Computação com Rigor e Beleza."
+  },
+  {
+    "objectID": "eras/parte-3-era-digital.html",
+    "href": "eras/parte-3-era-digital.html",
+    "title": "Parte 3 — Era Digital",
+    "section": "",
+    "text": "## 🚧 Em construção\n\nEste tópico (**Parte 3 — Era Digital**) faz parte da seção *Eras da Computação*  \ne será publicado em breve como parte da série **História da Computação**.\n\n\n“O número tornou-se bit — e o pensamento, eletricidade.”\n\n\n---\n\n[← Voltar ao índice da seção](index.qmd)"
+  },
+  {
+    "objectID": "eras/parte-5-era-das-redes.html",
+    "href": "eras/parte-5-era-das-redes.html",
+    "title": "Parte 5 — Era das Redes",
+    "section": "",
+    "text": "## 🚧 Em construção\n\nEste tópico (**Parte 5 — Era das Redes**) faz parte da seção *Eras da Computação*  \ne será publicado em breve como parte da série **História da Computação**.\n\n\n“Quando tudo se conecta, pensar torna-se coletivo.”\n\n\n---\n\n[← Voltar ao índice da seção](index.qmd)"
+  },
+  {
+    "objectID": "eras/parte-2-era-mecanica.html",
+    "href": "eras/parte-2-era-mecanica.html",
+    "title": "Parte 2 — Era Mecânica",
+    "section": "",
+    "text": "## 🚧 Em construção\n\nEste tópico (**Parte 2 — Era Mecânica**) faz parte da seção *Eras da Computação*  \ne será publicado em breve como parte da série **História da Computação**.\n\n\n“Mecânica e mente começaram a se confundir quando as engrenagens passaram a pensar.”\n\n\n---\n\n[← Voltar ao índice da seção](index.qmd)"
+  },
+  {
+    "objectID": "eras/parte-6-era-da-inteligencia.html",
+    "href": "eras/parte-6-era-da-inteligencia.html",
+    "title": "Parte 6 — Era da Inteligência",
+    "section": "",
+    "text": "## 🚧 Em construção\n\nEste tópico (**Parte 6 — Era da Inteligência**) faz parte da seção *Eras da Computação*  \ne será publicado em breve como parte da série **História da Computação**.\n\n\n“A máquina não apenas calcula: ela aprende.\nE talvez, um dia, compreenda.”\n\n\n---\n\n[← Voltar ao índice da seção](index.qmd)"
   },
   {
     "objectID": "about.html",
